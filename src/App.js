@@ -1,14 +1,14 @@
 import React from "react";
 import Navbar from "./Navbar";
-import Routes from "./Routes";
+import RoutePath from "./RoutePath";
 
 const App = () => {
-    return (
-      <div>
-        <Navbar />
-        <Routes />
-      </div>
-    );
+  return (
+    <div>
+      <Navbar />
+      <RoutePath />
+    </div>
+  );
 };
 
 export default App;
