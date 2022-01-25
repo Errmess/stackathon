@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import {
-  BrowserRouter,
   Routes, // instead of "Switch"
   Route,
 } from "react-router-dom";
