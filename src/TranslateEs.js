@@ -8,7 +8,7 @@ let endpoint =
 
 let region = "eastus";
 
-export async function translateText(text) {
+export async function translateTextEs(text) {
   const options = {
     headers: {
       "Ocp-Apim-Subscription-Key": subscriptionKey,
@@ -21,7 +21,7 @@ export async function translateText(text) {
 
   try {
     const response = await axios.post(
-      endpoint + "&from=en&to=es&",
+      endpoint + "&from=es&to=en&",
       [{ "Text": text }], options,
        );
     const result = JSON.stringify(response.data[0].translations[0].text);
@@ -33,4 +33,3 @@ export async function translateText(text) {
 
 // Call the function to translate text.
 //translateText();
-

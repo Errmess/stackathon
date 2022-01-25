@@ -1,6 +1,6 @@
 import React from "react";
-import { translateText } from "./Translate";
-import { Link } from "react-router-dom";
+import {translateText} from "./Translate";
+import {translateTextEs} from "./TranslateEs";
 
 export default class BedtimeStories extends React.Component {
   constructor(props) {
@@ -20,12 +20,8 @@ export default class BedtimeStories extends React.Component {
       <div className="all-view-bedtime-Stories">
         <h1>BEDTIME STORIES SECTION</h1>
         <div className="all-view-buttons">
-          <button type="button" className="btn">
-            English
-          </button>
-          <button type="button" className="btn">
-            Spanish
-          </button>
+          <button className="btn" onClick={() => {storyOne = translateTextEs(storyOne)}}>English</button>
+          <button className="btn" onClick={() => {storyOne = translateText(storyOne)}}>Spanish</button>
         </div>
         <div className="description">
           <img
