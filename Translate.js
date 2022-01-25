@@ -24,7 +24,7 @@ if (!process.env[region_var]) {
 }
 var region = process.env[region_var];
 
-function translateText() {
+export function translateText(text) {
   let options = {
     // method: "POST",
     baseUrl: endpoint,
@@ -41,7 +41,7 @@ function translateText() {
     },
     body: [
       {
-        text: "STUFF TO TRANSLATE",
+        text,
       },
     ],
     json: true,
