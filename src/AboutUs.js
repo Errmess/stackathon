@@ -1,18 +1,23 @@
-import React from "react"
+import React from "react";
 
 export default class AboutUs extends React.Component {
-
   render() {
     return (
       <div>
-        <h1>sample translation test</h1>
-        <p>
-        Once upon a time a girl named Cinderella lived with her stepmother and two stepsisters. Poor Cinderella had to work hard all day long so the others could rest. It was she who had to wake up each morning when it was still dark and cold to start the fire. It was she who cooked the meals. It was she who kept the fire going. The poor girl could not stay clean, from all the ashes and cinders by the fire.
+        <h1>BEDTIME STORYTELLERS</h1>
+        <p className="about">
+          This site is meant to provide bedtime stories in various languages
+          with the help of Microsoft Azure Translator API! Currently, we only
+          have English and Spanish languages. But we hope to provide a lot more
+          languages in the near future! Eventually, we want to implement text to
+          voice API to make it even easier to hear these wonderful bedtime
+          stories.
         </p>
-        <p>Meet our team:</p>
-        <p>Seldon</p>
-        <p>Tenzin</p>
+        <h2>Meet our team:</h2>
+        <div className="us">
+          <h3>Seldon and Tenzin</h3>
+        </div>
       </div>
-    )
+    );
   }
 }
