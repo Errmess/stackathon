@@ -1,27 +1,41 @@
 import React from "react";
-import {translateText} from "./Translate";
-import {translateTextEs} from "./TranslateEs";
+import { translateText } from "./Translate";
+import { translateTextEs } from "./TranslateEs";
 
 export default class BedtimeStories extends React.Component {
-  constructor(props) {
-    super(props);
-    const storyOne =
+  render() {
+    let storyOne =
       "I was sitting in class the first time that I saw the frog. Miss Weaver had been my teacher for a few months, and was best known around Stagwood for having a stack of black hair that rose a foot above her head. Before the school year started, I’d heard rumors about her, and within a week I realized that they were all true. For one thing, she did, in fact, wear the same outfit every day; the colors changed, but she always had on striped pants and a striped jacket. For another thing, she was mind-numbingly boring. The kind of boring that makes your eyes shut without your permission. The biggest problem, though, was the stories. She was obsessed with tales of former students who had become some kind of famous. The first couple of times weren’t bad, maybe even kind of interesting, but by the second week of school she had started repeating herself, just like her outfits.";
-    const storyTwo =
-      "Gemma was only five minutes away from her parents’ hut, but the jungle had already taken on a different personality. It was thicker. The trees had grown taller. The ti plants shaded the green forest a sinister red. There was no doubt about it- the jungle was more dangerous here, and Gemma loved it. As a baby, Gemma’s parents had taken her on their expeditions over mountains, deserts, and vast seas. It was exciting, unpredictable, and deeply irresponsible. Now that they had settled down in the tropical rainforest, Gemma had to devise intricate plans just to sneak out for morning adventures.";
-    const storyThree =
+    let storyTwo =
+      "Gemma was only five minutes from her parents' cabin, but the jungle had already taken on a different personality. It was thicker. The trees had grown taller. The ti plants shaded the green forest a sinister red. There was no doubt about it: the jungle was more dangerous here, and Gemma loved it. As a baby, Gemma's parents had taken her on their expeditions over mountains, deserts, and vast seas. It was exciting, unpredictable and deeply irresponsible. Now that they had settled in the rainforest, Gemma had to come up with intricate plans just to sneak away from the morning adventures.";
+    let storyThree =
       "Follow two young explorers on a monorhyme (all the lines end in the same rhyme) adventure that takes you across the sea to the mysterious Island of Bum Bum Ba Loo. You'll meet the King and Queen, dance with Bum Bum Balites, and learn the secret to Bum Berry Goo! The only problem is finding your way back again...The Island of Bum Bum Ba Loo is a bedtime tale about discovery, with an ending to encourage the explorer in us all!";
     this.stories = [storyOne, storyTwo, storyThree];
-    translateText(storyOne);
-  }
 
-  render() {
     return (
       <div className="all-view-bedtime-Stories">
         <h1>BEDTIME STORIES SECTION</h1>
         <div className="all-view-buttons">
-          <button className="btn" onClick={() => {storyOne = translateTextEs(storyOne)}}>English</button>
-          <button className="btn" onClick={() => {storyOne = translateText(storyOne)}}>Spanish</button>
+          <button
+            className="btn"
+            onClick={() => {
+              storyOne = translateTextEs(storyOne);
+              storyTwo = translateTextEs(storyTwo);
+              storyThree = translateTextEs(storyThree);
+            }}
+          >
+            English
+          </button>
+          <button
+            className="btn"
+            onClick={() => {
+              storyOne = translateText(storyOne);
+              storyTwo = translateText(storyTwo);
+              storyThree = translateText(storyThree);
+            }}
+          >
+            Spanish
+          </button>
         </div>
         <div className="description">
           <img

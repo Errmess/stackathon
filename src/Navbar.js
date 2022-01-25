@@ -15,13 +15,13 @@ export class Navbar extends Component {
       <div id="menuArea">
         <input type="checkbox" id="menuToggle"></input>
 
-        <label for="menuToggle" class="menuOpen">
-          <div class="open"></div>
+        <label htmlFor="menuToggle" className="menuOpen">
+          <div className="open"></div>
         </label>
 
-        <div class="menu menuEffects">
-          <label for="menuToggle"></label>
-          <div class="menuContent">
+        <div className="menu menuEffects">
+          <label htmlFor="menuToggle"></label>
+          <div className="menuContent">
             <ul>
               <li>
                 {" "}
